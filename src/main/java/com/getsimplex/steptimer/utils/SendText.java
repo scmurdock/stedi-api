@@ -32,17 +32,7 @@ public class SendText {
         textMessage.setMessage(text);
         textMessage.setPhoneNumber(formattedPhone);
 
-//        HttpClient httpClient = new HttpClient();
-//
-//        Request request = httpClient.POST("https://dev.stedi.me/sendtext");//this url only allows a user to text themselves using their own token
-//        request.header(HttpHeader.ACCEPT,"application/json");
-//        request.header(HttpHeader.CONTENT_TYPE,"application/json");
-//        request.header("suresteps.session.token",AUTH_TOKEN);
-//
 
-//
-//        request.content(new StringContentProvider(gson.toJson(textMessage)),"application/json");
-//        request.send();
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI("https://dev.stedi.me/sendtext"))
